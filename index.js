@@ -97,11 +97,11 @@ app.get("/getCalculation", authentication, async (req, res) => {
 app.listen(PORT, async () => {
     try{
         await connection
-        console.log("Connection to DB successfully")
+        // console.log("Connection to DB successfully")
     }
     catch(err){
         console.log(err)
-        console.log("Error connecting to DB")
+        // console.log("Error connecting to DB")
     }
-    console.log(`Listening on PORT ${PORT}`)
+    // console.log(`Listening on PORT ${PORT}`)
 })
