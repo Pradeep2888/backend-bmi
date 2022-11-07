@@ -72,6 +72,11 @@ app.get("/getProfile", authentication, async (req, res) => {
     res.send({name, email})
 })
 
+app.get("/getData", async (req, res) => {
+    const user =await  UserModel.find()
+    res.send(user)
+})
+
 app.post("/calculateBMI", authentication, async (req, res) => {
      const {height, weight, user_id} = req.body;
      const height_in_metre = Number(height)*0.3048
