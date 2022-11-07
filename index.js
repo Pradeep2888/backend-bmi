@@ -74,7 +74,7 @@ app.get("/getProfile", authentication, async (req, res) => {
 
 app.get("/getData", async (req, res) => {
     const user =await  UserModel.find()
-    res.send(user)
+    res.send({user})
 })
 
 app.post("/calculateBMI", authentication, async (req, res) => {
